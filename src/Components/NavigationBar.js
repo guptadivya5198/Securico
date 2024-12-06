@@ -12,6 +12,8 @@ const NavigationBar = () => {
   const [dropdowns, setDropdowns] = useState({
     aboutUs: false,
     products: false,
+    wiredIntruder: false,
+    controlPanel: false,
     monitoring: false,
     productSubMenu: false,
     partnerWithUs: false,
@@ -77,6 +79,16 @@ const NavigationBar = () => {
       <div className="w-full h-[100px] flex justify-between items-center px-[150px]">
         {/* Left Section */}
         <div className="flex items-center gap-6">
+          <p className="hover:border-b-4 hover:border-b-red-700 font-bold p-1 hover:cursor-pointer overflow-y-auto max-h-64">
+            <span
+              onClick={() => {
+                navigate('/');
+              }}
+              className="cursor-pointer"
+            >
+              Home
+            </span>
+          </p>
           {/* About Us Dropdown */}
           <div
             className="relative inline-block"
@@ -116,31 +128,92 @@ const NavigationBar = () => {
             )}
           </div>
 
-          {/* Products Dropdown */}
+          {/* Main Products Dropdown */}
           <div className="relative inline-block">
             {/* Main Dropdown Trigger */}
             <div
               onMouseEnter={() => toggleDropdown('products')}
               onMouseLeave={() => toggleDropdown('products')}
+              className="cursor-pointer"
             >
-              <p className="hover:border-b-4 hover:border-b-red-700 font-bold p-1 hover:cursor-pointer">
+              <p className="hover:border-b-4 overflow-y-auto max-h-64 hover:cursor-pointer hover:border-b-red-700 font-bold p-1">
                 Products+
               </p>
 
+              {/* Main Dropdown */}
               {dropdowns.products && (
-                <div className="absolute left-0 w-64 bg-white rounded-md shadow-lg overflow-y-auto max-h-64 z-10">
+                <div className="absolute left-0 w-64 bg-white rounded-md shadow-lg max-h-64 z-10">
                   <div className="pt-10">
-                    <ul className="bg-white rounded-md z-10 overflow-y-auto max-h-64 ">
+                    <ul>
+                      {/* Wired Intruder Alarms */}
                       <li
                         className="relative px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                        onMouseEnter={() => toggleDropdown('controlPanel')}
-                        onMouseLeave={() => toggleDropdown('controlPanel')}
+                        onMouseEnter={() => toggleDropdown('wiredIntruder')}
+                        onMouseLeave={() => toggleDropdown('wiredIntruder')}
                       >
-                        Control Panels
-                      </li>
-                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                         Wired Intruder Alarms
+                        {/* Nested Dropdown for Wired Intruder Alarms */}
+                        {dropdowns.wiredIntruder && (
+                          <div className="absolute top-2 left-full w-64 bg-white rounded-md shadow-lg z-20">
+                            <ul>
+                              {/* Control Panels */}
+                              <li
+                                className="relative px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                onMouseEnter={() =>
+                                  toggleDropdown('controlPanel')
+                                }
+                                onMouseLeave={() =>
+                                  toggleDropdown('controlPanel')
+                                }
+                              >
+                                Control Panels
+                                {/* Nested Dropdown for Control Panels */}
+                                {dropdowns.controlPanel && (
+                                  <div className="absolute top-4 left-full w-64 bg-white rounded-md shadow-lg z-30">
+                                    <ul>
+                                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                        <span
+                                          onClick={() => {
+                                            navigate('/ipbasedproduct');
+                                          }}
+                                          className="cursor-pointer border-b-red-700"
+                                        >
+                                          IP Series
+                                        </span>
+                                      </li>
+                                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                        GSM Based
+                                      </li>
+                                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                        PSTN Based
+                                      </li>
+                                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                        Multicomm Series
+                                      </li>
+                                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                        Panels Without Inbuilt Communication
+                                      </li>
+                                    </ul>
+                                  </div>
+                                )}
+                              </li>
+                              <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                Keypads
+                              </li>
+                              <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                Sensors
+                              </li>
+                              <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                Sounders & Flashers
+                              </li>
+                              <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                Accessories
+                              </li>
+                            </ul>
+                          </div>
+                        )}
                       </li>
+
                       <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                         Wireless Intruder Alarms
                       </li>
@@ -155,28 +228,9 @@ const NavigationBar = () => {
                 </div>
               )}
             </div>
-            {/* one more column send your requirements , bg-yellow or text black  control panel -ip based wala description poora */}
-            {/* Separate Dropdown for Control Panels */}
-            {/* {dropdowns.controlPanel && (
-              <div
-                className="absolute  top-5 w-64 bg-white rounded-md z-10 max-h-64 overflow-y-auto scroll-smooth"
-                onMouseEnter={() => toggleDropdown('controlPanel')}
-                onMouseLeave={() => toggleDropdown('controlPanel')}
-              >
-                <ul>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    Keypads
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    Sensors
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    Other Accessories
-                  </li>
-                </ul>
-              </div>
-            )} */}
           </div>
+
+          {/* soltuion */}
           <p className="hover:border-b-4 hover:border-b-red-700 font-bold p-1 hover:cursor-pointer">
             <span
               onClick={() => {

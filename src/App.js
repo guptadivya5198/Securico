@@ -12,6 +12,7 @@ import AboutSecurico from './Components/Inside components/AboutSecurico'; // Imp
 import Solution from './Components/Solution';
 import CentralMonitoring from './Components/Inside components/CentralMonitoring';
 import ContactUs from './Components/ContactUs';
+import IPBasedProduct from './Components/Inside components/IPBasedProduct';
 
 const slides = [
   {
@@ -51,10 +52,12 @@ function App() {
             </>
           }
         />
+        <Route path="/" element={<MySwiper />} />
         <Route path="/aboutsecurico" element={<AboutSecurico />} />
         <Route path="/solution" element={<Solution />} />
         <Route path="/centralmonitoring" element={<CentralMonitoring />} />
         <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/ipbasedproduct" element={<IPBasedProduct />} />
       </Routes>
     </div>
   );
