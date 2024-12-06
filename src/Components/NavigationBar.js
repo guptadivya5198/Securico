@@ -155,7 +155,7 @@ const NavigationBar = () => {
                 </div>
               )}
             </div>
-
+            {/* one more column send your requirements , bg-yellow or text black  control panel -ip based wala description poora */}
             {/* Separate Dropdown for Control Panels */}
             {/* {dropdowns.controlPanel && (
               <div

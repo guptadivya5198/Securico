@@ -11,12 +11,14 @@ const Footer = () => {
   const [name, setName] = useState('');
   const [mobile, setMobile] = useState('');
   const [city, setCity] = useState('');
+  const [requirement, setRequirement] = useState('');
 
   async function submitFunctions() {
     const reqBody = {
       name: name,
       contact: mobile,
       city: city,
+      requirement: requirement,
     };
 
     await axios
@@ -26,6 +28,7 @@ const Footer = () => {
         setCity('');
         setName('');
         setMobile('');
+        setRequirement('');
       })
       .catch((e) => {
         console.log(e);
@@ -169,6 +172,13 @@ const Footer = () => {
               onChange={(e) => setCity(e.target.value)}
               type="text"
               placeholder="Your City"
+              className="px-1 w-[249px] text-black h-[41px] rounded-[3px] mt-2"
+            />
+            <input
+              value={requirement}
+              onChange={(e) => setRequirement(e.target.value)}
+              type="text"
+              placeholder="Enter Your Requirement"
               className="px-1 w-[249px] text-black h-[41px] rounded-[3px] mt-2"
             />
             <button

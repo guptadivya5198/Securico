@@ -4,19 +4,19 @@ import axios from 'axios';
 
 const ContactUs = () => {
   const [firstname, setFirstName] = useState('');
-  const [lastname, setLastEmail] = useState('');
+  const [lastname, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const [contact, setcontact] = useState('');
-  const [orgzname, setOrgzName] = useState('');
+  const [mobilenumber, setMobilenumber] = useState('');
+  const [companyname, setCompanyname] = useState('');
   const [message, setMessage] = useState('');
 
   async function submitFunction() {
     const reqBody = {
       firstname: firstname,
-      lasttname: lastname,
+      lastname: lastname,
       email: email,
-      contact: contact,
-      orgzname: orgzname,
+      mobilenumber: mobilenumber,
+      companyname: companyname,
       message: message,
     };
 
@@ -25,10 +25,10 @@ const ContactUs = () => {
       .then((result) => {
         alert(result?.data?.msg);
         setFirstName('');
-        setLastEmail('');
+        setLastName('');
         setEmail('');
-        setcontact('');
-        setOrgzName('');
+        setMobilenumber('');
+        setCompanyname('');
         setMessage('');
       })
       .catch((e) => {
@@ -121,14 +121,16 @@ const ContactUs = () => {
         {/* Right Section - Form */}
         <div>
           <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
-          <form className="space-y-4">
+          <div className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <input
+                onChange={(e) => setFirstName(e.target.value)}
                 type="text"
                 placeholder="First Name*"
                 className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring focus:ring-red-500"
               />
               <input
+                onChange={(e) => setLastName(e.target.value)}
                 type="text"
                 placeholder="Last Name*"
                 className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring focus:ring-red-500"
@@ -136,22 +138,26 @@ const ContactUs = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <input
+                onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 placeholder="Your Email*"
                 className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring focus:ring-red-500"
               />
               <input
+                onChange={(e) => setMobilenumber(e.target.value)}
                 type="text"
                 placeholder="Phone Number*"
                 className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring focus:ring-red-500"
               />
             </div>
             <input
+              onChange={(e) => setCompanyname(e.target.value)}
               type="text"
-              placeholder="Name of your organization*"
+              placeholder="Name of your Company"
               className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring focus:ring-red-500"
             />
             <textarea
+              onChange={(e) => setMessage(e.target.value)}
               placeholder="Message..."
               rows="4"
               className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring focus:ring-red-500"
@@ -163,7 +169,7 @@ const ContactUs = () => {
             >
               Send Now
             </button>
-          </form>
+          </div>
         </div>
       </div>
       <Footer />
