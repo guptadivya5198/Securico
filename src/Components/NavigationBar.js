@@ -248,13 +248,13 @@ const NavigationBar = () => {
                 {' '}
                 <ul>
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    <a href="/our-products">Join Our Team</a>
+                    <a>Join Our Team</a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    <a href="/our-products">Become Our Channel Partner</a>
+                    <a>Become Our Channel Partner</a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    <a href="/about-team">Become A Dealer</a>
+                    <a>Become A Dealer</a>
                   </li>
                 </ul>
               </div>
@@ -276,19 +276,19 @@ const NavigationBar = () => {
               <div className="p-10">
                 <ul>
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    <a href="/our-products">Blogs</a>
+                    <a>Blogs</a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    <a href="/our-products">FAQ</a>
+                    <a>FAQ</a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    <a href="/about-team">White Papers</a>
+                    <a>White Papers</a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    <a href="/about-team">Videos</a>
+                    <a>Videos</a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    <a href="/about-team">Crime News</a>
+                    <a>Crime News</a>
                   </li>
                 </ul>
               </div>
