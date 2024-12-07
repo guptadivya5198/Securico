@@ -15,7 +15,7 @@ const Neuron = () => {
     setContent(tabContent);
   };
   return (
-    <div className="w-[1535px] h-[1800px] flex flex-col">
+    <div className="w-[1535px] h-[1750px] flex flex-col">
       <div className="flex justify-center mt-[80px]">
         {/*1st summary div */}
         <div className="w-[760px] h-[930px] flex flex-col">
