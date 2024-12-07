@@ -12,7 +12,7 @@ const IPBasedProduct = () => {
   };
 
   return (
-    <div className="w-[1535px] flex flex-col h-[3067px] bg-yellow-50">
+    <div className="w-[1535px] flex flex-col h-[3067px] bg-yellow-10">
       {/* inner 1st div */}
       <div className="pt-[90px] w-full h-[2561px] justify-evenly flex ">
         <div className="w-[870px] h-[1016px]">
@@ -22,19 +22,6 @@ const IPBasedProduct = () => {
             </h1>
           </div>
           <div className="flex flex-wrap gap-6 justify-center items-center ml-[100px] ">
-            {/* 1 card */}
-            {/* <div className="w-[240px] h-[427px] rounded-xl bg-white shadow-2xl">
-              <img
-                src="https://www.securicoelectronics.com/wp-content/uploads/2022/11/Neuron-300x300.jpg"
-                alt="not found"
-                className="w-full h-[240px]"
-              />
-              <p className="w-full h-[26px] text-center">IP Series</p>
-              <p className="w-[202px] h-[103px] text-center ml-4 font-bold text-xl hover:cursor-pointer hover:text-red-800">
-                Neuron: Security and Automation Hub for Residences and Small
-                Businesses
-              </p>
-            </div> */}
             <div className="w-[240px] h-[427px] rounded-xl bg-white shadow-2xl relative group">
               {/* Image */}
               <img
