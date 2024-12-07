@@ -13,6 +13,7 @@ import Solution from './Components/Solution';
 import CentralMonitoring from './Components/Inside components/CentralMonitoring';
 import ContactUs from './Components/ContactUs';
 import IPBasedProduct from './Components/Inside components/IPBasedProduct';
+import Neuron from './Components/Inside components/Neuron';
 
 const slides = [
   {
@@ -58,6 +59,7 @@ function App() {
         <Route path="/centralmonitoring" element={<CentralMonitoring />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/ipbasedproduct" element={<IPBasedProduct />} />
+        <Route path="/neuron" element={<Neuron />} />
       </Routes>
     </div>
   );

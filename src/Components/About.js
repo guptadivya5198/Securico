@@ -13,7 +13,7 @@ const About = () => {
   };
   return (
     // main div of page
-    <div className="w-[1535px] h-[480px] bg-gray-100 flex mx-auto gap-0">
+    <div className="w-[1535px] h-[480px] bg-yellow-100 flex mx-auto gap-0">
       <div className="w-[750px] h-full mx-auto flex justify-center items-center">
         <div className="relative w-[70%] h-[280px] ">
           {/* If not playing, show image with play button */}

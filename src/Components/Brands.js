@@ -4,7 +4,7 @@ import 'swiper/css/navigation'; // Navigation styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import {Navigation,Autoplay,} from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 const Brands = () => {
   const logos = [
@@ -43,8 +43,8 @@ const Brands = () => {
   ];
 
   return (
-    <div className="w-[1535px] h-[346px]">
-      <h1 className="w-[80%] mx-auto h-[96px] mt-8 text-center text-4xl font-bold">
+    <div className="w-[1535px] h-[346px] bg-yellow-50">
+      <h1 className="w-[80%] mx-auto h-[96px]  text-center text-4xl font-bold">
         Mega Brands <br /> Who Trusted Securico
       </h1>
       <div className="h-[150px] w-full mt-4 flex items-center justify-center">

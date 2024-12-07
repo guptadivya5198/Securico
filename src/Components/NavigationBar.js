@@ -28,7 +28,7 @@ const NavigationBar = () => {
   };
 
   return (
-    <div className="w-[1535px] bg-white border mx-auto sticky top-0 flex flex-col z-50">
+    <div className="w-[1535px] bg-yellow-200 border mx-auto sticky top-0 flex flex-col z-50">
       {/* Top Bar */}
       <div className="h-[46px] w-full px-[150px] flex justify-between items-center">
         <div className="flex items-center ">

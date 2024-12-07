@@ -19,7 +19,7 @@ const MySwiper = ({ slides = [] }) => {
   }
 
   return (
-    <div className="w-[1535px] h-[480px]">
+    <div className="w-[1535px] h-[480px] ">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} // Include Autoplay
         spaceBetween={50}

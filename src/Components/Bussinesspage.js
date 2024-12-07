@@ -2,10 +2,10 @@ import React from 'react';
 
 const Bussinesspage = () => {
   return (
-    <div className="w-[1535px] h-[552px] bg-black flex flex-col items-center">
+    <div className="w-[1535px] h-[552px] bg-yellow-100 flex flex-col items-center">
       <div className="w-[1170px] h-[170px] items-center flex flex-col">
         {/* Heading */}
-        <span className="w-[743px] h-[152px] mt-8 text-white font-bold text-4xl text-center">
+        <span className="w-[743px] h-[152px] mt-8 text-black font-bold text-4xl text-center">
           Securico Can Help You Protect Your <br /> Home & Business from thefts,
           <br />
           burglaries and Fire!

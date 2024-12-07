@@ -3,7 +3,7 @@ import React from 'react';
 const InfraStru = () => {
   return (
     // main div
-    <div className="w-[1535px] h-[634px] bg-slate-200 flex">
+    <div className="w-[1535px] h-[634px] bg-yellow-100 flex">
       {/* 1 div divison */}
       <div className="w-[50%] flex items-center mt-10 flex-col gap-4">
         {/* first div for img */}
